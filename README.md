@@ -7,3 +7,10 @@
 ##### Создаем и активируем виртуальное окружение:
 ###### python -m venv venv
 ###### source venv/Scripts/activate
+##### Устанавливаем зависимости:
+###### pip install -r requirements.txt
+###### Запускаем миграции:
+###### python manage.py migrate
+##### Запускаем проект:
+###### python manage.py runserver
+## Примеры
