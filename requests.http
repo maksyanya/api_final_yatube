@@ -1,0 +1,157 @@
+
+### Обзор всех постов
+GET http://127.0.0.1:8000/api/v1/posts/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+### Добавление поста
+POST http://127.0.0.1:8000/api/v1/posts/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{
+    "text": "test_text5",
+    "author": 1
+}
+
+### Получения поста по id
+GET http://127.0.0.1:8000/api/v1/posts/2/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+### Обновление поста по id
+PUT http://127.0.0.1:8000/api/v1/posts/2/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{
+    "text": "test_0",
+    "author": 1
+}
+
+### Частичное обновление поста по id
+PATCH http://127.0.0.1:8000/api/v1/posts/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+{
+    "text": "test_update"
+}
+
+### Удаление поста по id
+DELETE http://127.0.0.1:8000/api/v1/posts/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+### Список всех комментариев поста начиная с 1го id:
+GET http://127.0.0.1:8000/api/v1/posts/4/comments/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+### Создание комментария
+POST http://127.0.0.1:8000/api/v1/posts/4/comments/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{
+    "post": 3,
+    "text": "test_comment3"
+}
+
+### Получение комментария поста по id у поста с id=post_id
+GET http://127.0.0.1:8000/api/v1/posts/4/comments/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+### Обновление комментария по id у поста с id=post_id
+PUT http://127.0.0.1:8000/api/v1/posts/4/comments/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{
+    "post": 4,
+    "text": "test_comment_add_new"
+}
+
+### Частичное обновления комментария по id у поста с id=post_id
+PUT http://127.0.0.1:8000/api/v1/posts/4/comments/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{
+    "post": 4,
+    "text": "test_new"
+}
+
+### Удаление комментария по id 
+DELETE http://127.0.0.1:8000/api/v1/posts/4/comments/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+###  Список всех групп:
+GET  http://127.0.0.1:8000/api/v1/groups/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+### Получение информации о сообществе по id
+GET  http://127.0.0.1:8000/api/v1/groups/1/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+###  Cоздание группы:
+POST  http://127.0.0.1:8000/api/v1/groups/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{   
+    "title": "some_group3",
+    "slug": "3333",
+    "description": "some_group3"
+}
+
+### Обзор всех подписок пользователя
+GET http://127.0.0.1:8000/api/v1/follow/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+### Подписка пользователя от имени которого сделан запрос на пользователя переданного в теле запроса.
+POST http://127.0.0.1:8000/api/v1/follow/
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8
+
+{
+    "following": "user1"
+}
+
+
+### Получение JWT-токена
+POST http://127.0.0.1:8000/api/v1/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "Admin",
+    "password": "Djangomaks86"
+}
+
+### Проверка JWT-токена
+POST http://127.0.0.1:8000/api/v1/jwt/verify/
+Content-Type: application/json
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0NjYzNjg3LCJpYXQiOjE2NDIwNzE2ODcsImp0aSI6Ijg5OGFiZmNmNDBmZDQ2YjFiM2FkYjMzMzdkYTExZGZlIiwidXNlcl9pZCI6MX0.ir_puh_AMC5-Dj0nmy2uPGyohVd4FUXq_ijCbru0F9c"
+}
+
+
+### Обновление JWT-токена
+POST http://127.0.0.1:8000/api/v1/jwt/refresh/
+Content-Type: application/json
+
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MjE1ODA4NywiaWF0IjoxNjQyMDcxNjg3LCJqdGkiOiIyNTk2ZDJhNmJmNDY0YmExOTUyOTAwZDk5ZjM5YmU5NyIsInVzZXJfaWQiOjF9.T2uXNPHApGSehsdMo3tegYl50_7GgbsYGL21f8LLLy8"
+}
+
+###
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY0MjE4MTQ1NiwiaWF0IjoxNjQyMDk1MDU2LCJqdGkiOiJhMTM1MmU4ZTFiMTk0MjE4OGU4ZjkzODdhZjRkNzMxMSIsInVzZXJfaWQiOjF9.YLp0AU9WFrnFXNNgth5qBklXqAHh4GmjPLc-2I-P68A",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQ0Njg3MDU2LCJpYXQiOjE2NDIwOTUwNTYsImp0aSI6ImQyNTMxMzBhYTEyNTQ2MzdhZjY2Y2ZiMjNmMDU2ODIyIiwidXNlcl9pZCI6MX0.h5_RRT5KwsJGe3n8jkGk5kip55N17WTlbkOQfAYppQ8"
+}
+###
+
